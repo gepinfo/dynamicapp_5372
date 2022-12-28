@@ -12,6 +12,7 @@ export class Routes {
             })
         })
         app.route('/files').post(this.files.GpCreate);
+app.route('/files').get(this.files.GpGetAllValues);
 app.route('/files/userid/created_by').get(this.files.GpGetNounCreatedBy);
      }
 

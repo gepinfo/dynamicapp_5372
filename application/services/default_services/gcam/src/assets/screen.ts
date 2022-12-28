@@ -7,7 +7,5 @@
 {"resources":"sefscreen", "role":"Guest"}
     ,
 {"resources":"addfiles", "role":"Guest"}
-    ,
-{"resources":"filescreate", "role":"Guest"}
     
 ]

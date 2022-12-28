@@ -13,7 +13,7 @@ info:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-   - url: http://localhost:8016
+   - url: http://localhost:8019
      description: addfile
 tags:
 - name: files
@@ -28,6 +28,19 @@ paths:
                application/json:
                   schema:
                      $ref: "#/components/schemas/files"
+         responses:
+            200:
+               description: Success
+            400:
+               description: Bad Request
+            404:
+               description: Not Found
+            500:
+               description: Internal Server Error
+      get:
+         tags:
+         -  files
+         description: GpGetAllValues
          responses:
             200:
                description: Success

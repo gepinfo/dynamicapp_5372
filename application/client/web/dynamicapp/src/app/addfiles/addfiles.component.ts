@@ -22,6 +22,15 @@ export class AddfilesComponent implements OnInit {
 
     ngOnInit() {
         this.files.created_by = sessionStorage.getItem('email') || ''; 
+        this.GpGetAllValues();
+    }
+    GpGetAllValues() {
+        this.addfilesService.GpGetAllValues().subscribe((data:any) => {
+            
+        },
+        (error:Error) => {
+            console.log('Error', error);
+        });
     }
     GpCreate() {
         this.addfilesService.GpCreate(this.files).subscribe((data:any) => {

@@ -204,7 +204,7 @@ services:
     image: systementry-5372
     container_name: systementry-5372
     ports: 
-      - 8015:8015
+      - 8018:8018
     env_file: .env
     depends_on:
       - mongo
@@ -220,7 +220,7 @@ services:
     image: addfile-5372
     container_name: addfile-5372
     ports: 
-      - 8016:8016
+      - 8019:8019
     env_file: .env
     depends_on:
       - mongo
@@ -236,7 +236,7 @@ services:
     image: listdrop-5372
     container_name: listdrop-5372
     ports: 
-      - 8017:8017
+      - 8020:8020
     env_file: .env
     depends_on:
       - mongo

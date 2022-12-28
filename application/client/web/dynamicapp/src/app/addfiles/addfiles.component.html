@@ -1,9 +1,21 @@
 <h2 class="screen-align">Addfiles</h2>
-<div id="template-i94m" class="gjs-row">
-    <div id="template-iywh" class="gjs-cell">
-        <label id="template-iyfl" class="label ">Files</label>
-        <input id="template-isuw" [(ngModel)]="files.name" [ngModelOptions]="{standalone: true}"
+<div id="template-inhw" class="gjs-row">
+    <div id="template-ilif" class="gjs-cell">
+        <label id="template-iw7u" class="label ">name</label>
+        <input id="template-iw1h" [(ngModel)]="files.name" [ngModelOptions]="{standalone: true}"
         ngDefaultControl class="input form-control " />
-        <button id="template-ikdx" (click)="GpCreate()" class="button btn btn-primary ">Create</button>
+        <button id="template-io7j" (click)="GpCreate()" class="button btn btn-primary ">Create</button>
+    </div>
+    <div id="template-i32h" class="gjs-cell">
+        <label id="template-iq8y" class="label ">files</label>
+        <div id="template-i1fim" class="">
+            <ng-select id="template-if9ml" name="dynamicdropdown_template-if9ml" [searchable]="true"
+            [virtualScroll]="true" [items]="itemArray" bindLabel="" bindValue="" [(ngModel)]="files.name"
+            [ngModelOptions]="{standalone: true}" ngDefaultControl class="form-control "></ng-select>
+        </div>
+        <select id="template-if9ml" [(ngModel)]="files.name" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl (click)="GpGetAllValues()" class="form-control form-control">
+            <option id="template-izzdi" class="">1</option>
+        </select>
     </div>
 </div>

@@ -14,6 +14,7 @@ export class filesController implements Controller {
 
     private initializeRoutes() {
         this.router.post('/files', this.GpCreate);
+this.router.get('/files', this.GpGetAllValues);
 this.router.get('/files/userid/created_by', this.GpGetNounCreatedBy);
         //#@gepdelimeterone@#
         //#@ssofacebookapiroute@#
@@ -26,6 +27,16 @@ public GpCreate(req: Request, res: Response) {
         .then((res: any) => res.response.json()).then(result => {
             switch(req.baseUrl) { case '/mobile': res.send(result); break; case '/web': res.send(result); break; default: res.send(null); }
             new CustomLogger().showLogger('info', 'Exit from filesController.ts: GpCreate');
+        }).catch(err => {
+            res.send(err);
+        });
+    }
+public GpGetAllValues(req: Request, res: Response) {
+            new CustomLogger().showLogger('info', 'Enter into filesController.ts: GpGetAllValues');
+        new ApiAdapter().get(Constant.ADDFILEURL + `${req.url}` )
+        .then((res: any) => res.response.json()).then(result => {
+            switch(req.baseUrl) { case '/mobile': res.send(result); break; case '/web': res.send(result); break; default: res.send(null); }
+            new CustomLogger().showLogger('info', 'Exit from filesController.ts: GpGetAllValues');
         }).catch(err => {
             res.send(err);
         });

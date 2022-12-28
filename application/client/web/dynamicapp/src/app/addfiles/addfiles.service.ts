@@ -17,4 +17,7 @@ export class AddfilesService {
         let jwt_token = sessionStorage.getItem('JwtToken');
  	 	return this.http.post(this.sharedService.WEB_API + '/files' + `?jwt_token=${jwt_token}`, files);
     }
+    (): Observable<any> {
+        
+    }
 }

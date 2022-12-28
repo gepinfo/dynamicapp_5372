@@ -17,6 +17,15 @@ export class filesService {
          });
     }
     
+public  GpGetAllValues(req: Request, callback){
+    new CustomLogger().showLogger('info', 'Enter into filesService.ts: GpGetAllValues')
+     
+     files.GpGetAllValues((response)=>{
+             new CustomLogger().showLogger('info', 'Exit from filesService.ts: GpGetAllValues')
+         callback(response);
+         });
+    }
+    
 public  GpGetNounCreatedBy(req: Request, callback){
     new CustomLogger().showLogger('info', 'Enter into filesService.ts: GpGetNounCreatedBy')
      let  filesData = { created_by: req.query.createdby };

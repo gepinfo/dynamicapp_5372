@@ -70,9 +70,9 @@ module.exports = {
             ],
             "environmentFiles": null,
             "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/dynamicapp_5372?authSource=admin"},{"name":"MONGO_DOMAIN","value":"127.0.0.1"},{"name":"SECURITYURL","value":"http://127.0.0.1:8003"},{"name":"AUTHPROXYURL","value":"http://127.0.0.1:8001"},{"name":"ADMINURL","value":"http://127.0.0.1:8004"},{"name":"GCAMURL","value":"http://127.0.0.1:8007"},{"name":"APIGATEWAY","value":"http://127.0.0.1:8000"},{"name":"SYSTEMCREDENTIALMANAGERURL","value":"http://127.0.0.1:8005"}
-            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8015"}
-            ,{"name":"ADDFILEURL","value":"http://dynamicapp0.local:8016"}
-            ,{"name":"LISTDROPURL","value":"http://dynamicapp0.local:8017"}
+            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8018"}
+            ,{"name":"ADDFILEURL","value":"http://dynamicapp0.local:8019"}
+            ,{"name":"LISTDROPURL","value":"http://dynamicapp0.local:8020"}
             ],
             "secrets": null,
             "mountPoints": [
@@ -294,7 +294,7 @@ module.exports = {
             ],
             "environmentFiles": null,
             "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/dynamicapp_5372?authSource=admin"},{"name":"MONGO_DOMAIN","value":"127.0.0.1"},{"name":"SECURITYURL","value":"http://127.0.0.1:8003"},{"name":"AUTHPROXYURL","value":"http://127.0.0.1:8001"},{"name":"ADMINURL","value":"http://127.0.0.1:8004"},{"name":"GCAMURL","value":"http://127.0.0.1:8007"},{"name":"APIGATEWAY","value":"http://127.0.0.1:8000"}
-            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8015"}
+            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8018"}
             ],
             "mountPoints": [
                 {
@@ -375,9 +375,9 @@ module.exports = {
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": "8015",
+                    "containerPort": "8018",
                     "protocol": "tcp",
-                    "hostPort": "8015"
+                    "hostPort": "8018"
                 }
             ],
             "environmentFiles": null,
