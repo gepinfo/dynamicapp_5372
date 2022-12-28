@@ -1,0 +1,22 @@
+<h2 class="screen-align">Filescreate</h2>
+<div id="template-ipfl" class="gjs-row">
+    <div id="template-iexf" class="gjs-cell">
+        <label id="template-i9dl" class="label ">Name</label>
+        <input id="template-ih16" [(ngModel)]="listdrop.name" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+        <button id="template-igw3o" (click)="GpCreate()" class="button btn btn-primary ">Create</button>
+    </div>
+    <div id="template-imxi" class="gjs-cell">
+        <label id="template-ie0i" class="label ">Files</label>
+        <div id="template-ig89k" class="">
+            <ng-select id="template-i39ly" name="dynamicdropdown_template-i39ly" [searchable]="true"
+            [virtualScroll]="true" [items]="filesitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="listdrop.files" [ngModelOptions]="{standalone: true}" ngDefaultControl
+            (click)="filesGpGetAllValues()" class="form-control "></ng-select>
+        </div>
+        <select id="template-i39ly" [(ngModel)]="listdrop.files" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl (click)="GpGetAllValues()" class="form-control form-control">
+            <option id="template-imtaf" class="">1</option>
+        </select>
+    </div>
+</div>
